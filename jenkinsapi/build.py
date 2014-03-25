@@ -142,7 +142,7 @@ class Build(JenkinsBase):
         upstream_build = None
         causes = None
         upstream = None
-        causes = actions = self.get_actions()['causes']
+        causes = self.get_actions()['causes']
         for cause in causes:
             if 'upstreamBuild' in cause:
                 upstream_build = cause['upstreamBuild']
